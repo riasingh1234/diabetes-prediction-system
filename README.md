@@ -1,102 +1,90 @@
 DiabetesAI 🩺
 
-AI-powered Diabetes Risk Prediction using Machine Learning.
+AI-Powered Diabetes Prediction System using Machine Learning
+
+🔗 Live Demo: https://diabetes-prediction-system-one.vercel.app/
+
+🔗 Backend API: https://diabetes-prediction-system-w7pb.onrender.com
+
+📂 GitHub Repository: https://github.com/riasingh1234/diabetes-prediction-system
 
 Overview
 
-DiabetesAI is a full-stack healthcare web application that predicts the likelihood of diabetes using patient medical information. The application uses a trained Random Forest model on the Pima Indians Diabetes Dataset and provides real-time risk predictions along with health recommendations.
+DiabetesAI is a full-stack web application that predicts diabetes risk using a Random Forest Machine Learning model trained on the Pima Indians Diabetes Dataset.
 
-Features
-🧠 Random Forest Machine Learning Model
-⚡ Real-time Diabetes Prediction
-📊 Interactive Dashboard
-📈 Exploratory Data Analysis (EDA) Visualizations
-📜 Prediction History
-💡 Personalized Health Recommendations
-✅ Input Validation
-📱 Responsive Modern UI
+The application provides:
+
+🧠 AI-powered prediction
+📊 Interactive dashboard
+📈 Exploratory Data Analysis
+📜 Prediction history
+💡 Personalized health recommendations
+✅ Input validation
+📱 Responsive UI
 Tech Stack
-Frontend
-React
-Vite
-CSS3
-Axios
-Backend
-Flask
-Flask-CORS
-NumPy
-Joblib
-Machine Learning
-Scikit-learn
-Random Forest
-Logistic Regression
-Decision Tree
-KNN
-Dataset
-
-Pima Indians Diabetes Dataset
-
-768 patients
-8 medical features
-Binary classification
+Frontend	Backend	Machine Learning
+React	Flask	Random Forest
+Vite	Flask-CORS	Scikit-Learn
+Axios	Joblib	Pandas
+CSS3	NumPy	Matplotlib
+Features
+AI-powered diabetes prediction
+Dashboard with dataset statistics
+Patient prediction form
+Prediction confidence score
+Health recommendations
+Prediction history
+EDA visualizations
+Responsive design
+Screenshots
+Home
+![Home](assets/home.png)
+Dashboard
+![Dashboard](assets/dashboard.png)
+Prediction
+![Prediction](assets/prediction.png)
+History
+![History](assets/history.png)
+EDA
+![EDA](assets/eda.png)
 Machine Learning Workflow
 Dataset
-     │
+    │
+    ▼
 EDA
-     │
+    │
+    ▼
 Data Cleaning
-     │
+    │
+    ▼
 Feature Scaling
-     │
-Train-Test Split
-     │
+    │
+    ▼
+Train/Test Split
+    │
+    ▼
 Train Multiple Models
-     │
-Select Best Model
-     │
-Save Model
-     │
+    │
+    ▼
+Random Forest Selected
+    │
+    ▼
 Flask API
-     │
+    │
+    ▼
 React Frontend
-
-## Screenshots
-
-### Home
-
-![Home](assets/home.png)
-
-### Dashboard
-
-![Dashboard](assets/dashboard.png)
-
-### Prediction
-
-![Prediction](assets/prediction.png)
-
-### History
-
-![History](assets/history.png)
-
-### EDA
-
-![EDA](assets/eda.png)
-
 Installation
-git clone <repo-url>
+Clone the repository
+git clone https://github.com/riasingh1234/diabetes-prediction-system.git
 
 cd diabetes-prediction-system
-
 Backend
-
 cd backend
 
 pip install -r requirements.txt
 
 python app.py
-
 Frontend
-
 cd frontend
 
 npm install
@@ -104,44 +92,32 @@ npm install
 npm run dev
 Project Structure
 diabetes-prediction-system/
-
-backend/
-    app.py
-    model.pkl
-    scaler.pkl
-
-frontend/
-    src/
-    public/
-
-scripts/
-    train_model.py
-
-data/
-    diabetes.csv
-
-outputs/
-API Endpoint
-POST /predict
-
-Request
-
-{
-  "Pregnancies": 2,
-  "Glucose": 140,
-  "BloodPressure": 72,
-  "SkinThickness": 30,
-  "Insulin": 120,
-  "BMI": 28.5,
-  "DiabetesPedigreeFunction": 0.45,
-  "Age": 35
-}
-Prediction Output
-{
-  "prediction": 0,
-  "risk": "Low",
-  "probability": 78.24
-}
+│
+├── backend/
+│   ├── app.py
+│   ├── model.pkl
+│   ├── scaler.pkl
+│   ├── model_metadata.json
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   └── package.json
+│
+├── data/
+│   └── diabetes.csv
+│
+├── outputs/
+│
+├── scripts/
+│   └── train_model.py
+│
+└── README.md
+Dataset
+Dataset: Pima Indians Diabetes Dataset
+Patients: 768
+Medical Features: 8
+Target: Diabetes Outcome
 Author
 
 Ria Singh
