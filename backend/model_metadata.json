@@ -11,5 +11,45 @@
         "DiabetesPedigreeFunction",
         "Age"
     ],
-    "target": "Outcome"
+    "target": "Outcome",
+    "feature_importance": {
+        "Glucose": 0.2741,
+        "BMI": 0.1619,
+        "DiabetesPedigreeFunction": 0.125,
+        "Age": 0.113,
+        "Insulin": 0.0912,
+        "BloodPressure": 0.0835,
+        "Pregnancies": 0.0808,
+        "SkinThickness": 0.0705
+    },
+    "model_comparison": [
+        {
+            "name": "Logistic Regression",
+            "accuracy": 0.7078,
+            "precision": 0.6,
+            "recall": 0.5,
+            "f1": 0.5455
+        },
+        {
+            "name": "Decision Tree",
+            "accuracy": 0.6818,
+            "precision": 0.5532,
+            "recall": 0.4815,
+            "f1": 0.5149
+        },
+        {
+            "name": "Random Forest",
+            "accuracy": 0.7792,
+            "precision": 0.7174,
+            "recall": 0.6111,
+            "f1": 0.66
+        },
+        {
+            "name": "KNN",
+            "accuracy": 0.7532,
+            "precision": 0.66,
+            "recall": 0.6111,
+            "f1": 0.6346
+        }
+    ]
 }

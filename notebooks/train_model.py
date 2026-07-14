@@ -137,7 +137,7 @@ models = {
 }
 
 results = []
-
+model_comparison = []
 best_model = None
 best_accuracy = 0
 best_model_name = ""
@@ -164,7 +164,13 @@ for name, model in models.items():
         recall,
         f1
     ])
-
+    model_comparison.append({
+    "name": name,
+    "accuracy": round(float(accuracy), 4),
+    "precision": round(float(precision), 4),
+    "recall": round(float(recall), 4),
+    "f1": round(float(f1), 4)
+    })
     print(f"\n{name}")
     print("-"*40)
     print(f"Accuracy : {accuracy:.4f}")
@@ -191,11 +197,36 @@ os.makedirs("../backend", exist_ok=True)
 joblib.dump(best_model, "../backend/model.pkl")
 joblib.dump(scaler, "../backend/scaler.pkl")
 
+# -----------------------------
+# Save Feature Importance
+# -----------------------------
+
+feature_importance = {}
+
+if best_model_name == "Random Forest":
+
+    importances = best_model.feature_importances_
+
+    feature_importance = {
+        feature: round(float(importance), 4)
+        for feature, importance in zip(X.columns, importances)
+    }
+
+    feature_importance = dict(
+        sorted(
+            feature_importance.items(),
+            key=lambda item: item[1],
+            reverse=True,
+        )
+    )
+
 metadata = {
     "best_model": best_model_name,
     "accuracy": round(best_accuracy, 4),
     "features": list(X.columns),
-    "target": "Outcome"
+    "target": "Outcome",
+    "feature_importance": feature_importance,
+    "model_comparison": model_comparison
 }
 
 with open("../backend/model_metadata.json", "w") as f:
