@@ -1,13 +1,40 @@
 function Navbar() {
+
+  function scrollTo(id) {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
     <nav className="navbar">
 
-      <div>
-        <h1>🩺 Diabetes Prediction System</h1>
+      <div className="navbar-logo">
 
-        <p>
-          AI Powered Healthcare Risk Assessment Platform
-        </p>
+        <h1>🩺 DiabetesAI</h1>
+
+        <p>AI Powered Healthcare</p>
+
+      </div>
+
+      <div className="navbar-links">
+
+        <button onClick={() => scrollTo("hero")}>
+          Home
+        </button>
+
+        <button onClick={() => scrollTo("dashboard")}>
+          Dashboard
+        </button>
+
+        <button onClick={() => scrollTo("prediction")}>
+          Prediction
+        </button>
+
+        <button onClick={() => scrollTo("history")}>
+          History
+        </button>
+
       </div>
 
     </nav>

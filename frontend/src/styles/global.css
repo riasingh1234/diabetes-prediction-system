@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: #f4f8ff;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+input {
+    font-family: inherit;
+}
+
+
+:root {
+
+    --primary: #2563eb;
+    --secondary: #06b6d4;
+
+    --success: #16a34a;
+    --warning: #f59e0b;
+    --danger: #dc2626;
+
+    --dark: #111827;
+    --light: #ffffff;
+
+    --card-bg: rgba(255,255,255,0.75);
+
+    --shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+    --radius: 18px;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 20px;
+}
+
+
+.fade-in {
+
+    animation: fadeIn 0.6s ease;
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}

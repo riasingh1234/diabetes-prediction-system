@@ -1,0 +1,92 @@
+@media(max-width:900px){
+
+
+.form-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.hero h1 {
+
+    font-size:36px;
+
+}
+
+
+
+.hero p {
+
+    font-size:17px;
+
+}
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.app-container {
+
+    width:95%;
+
+}
+
+
+
+.card {
+
+    padding:20px;
+
+}
+
+
+
+.hero {
+
+    padding:40px 20px;
+
+}
+
+
+
+.hero h1 {
+
+    font-size:30px;
+
+}
+
+
+
+.button-group {
+
+    flex-direction:column;
+
+}
+
+
+
+.primary-btn,
+.secondary-btn {
+
+    width:100%;
+
+}
+
+
+
+.history-card {
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+}

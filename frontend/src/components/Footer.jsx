@@ -2,17 +2,35 @@ function Footer() {
   return (
     <footer className="footer">
 
-      <p>
-        Developed by <strong>Ria Singh</strong>
-      </p>
+      <div className="footer-content">
 
-      <p>
-        React • Flask • Machine Learning • Random Forest
-      </p>
+        <h2>🩺 DiabetesAI</h2>
 
-      <p>
-        © 2026 Diabetes Prediction System
-      </p>
+        <p>
+          AI-Powered Healthcare Risk Assessment Platform
+        </p>
+
+        <div className="footer-tech">
+
+          <span>⚛ React</span>
+
+          <span>🐍 Flask</span>
+
+          <span>🤖 Machine Learning</span>
+
+          <span>🌲 Random Forest</span>
+
+        </div>
+
+        <hr />
+
+        <p className="footer-copy">
+
+          © 2026 Ria Singh
+
+        </p>
+
+      </div>
 
     </footer>
   );

@@ -1,24 +1,39 @@
 function RecommendationList({ recommendations }) {
 
-  if (!recommendations) return null;
+  if (!recommendations || recommendations.length === 0) return null;
 
   return (
 
-    <div className="recommendations">
+    <div className="recommendation-section">
 
-      <h3>💡 Health Recommendations</h3>
+      <h3>💡 Personalized Health Recommendations</h3>
 
-      <ul>
+      <div className="recommendation-grid">
 
         {recommendations.map((item, index) => (
 
-          <li key={index}>
-            ✅ {item}
-          </li>
+          <div
+            className="recommendation-item"
+            key={index}
+          >
+
+            <div className="recommendation-icon">
+
+              {index === 0 && "🥗"}
+              {index === 1 && "🚶"}
+              {index === 2 && "💧"}
+              {index === 3 && "😴"}
+              {index > 3 && "✅"}
+
+            </div>
+
+            <p>{item}</p>
+
+          </div>
 
         ))}
 
-      </ul>
+      </div>
 
     </div>
 
