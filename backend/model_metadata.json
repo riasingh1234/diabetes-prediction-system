@@ -1,0 +1,15 @@
+{
+    "best_model": "Random Forest",
+    "accuracy": 0.7792,
+    "features": [
+        "Pregnancies",
+        "Glucose",
+        "BloodPressure",
+        "SkinThickness",
+        "Insulin",
+        "BMI",
+        "DiabetesPedigreeFunction",
+        "Age"
+    ],
+    "target": "Outcome"
+}
